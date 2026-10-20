@@ -1105,7 +1105,7 @@ mod tests {
             assert_eq!(Page::parse(page.id()), Some(page));
         }
         assert_eq!(Page::parse(" SAVEAS "), Some(Page::SaveAs));
-        assert_eq!(Page::parse("account"), None);
+        assert_eq!(Page::parse("account"), Some(Page::Account));
         assert_eq!(Page::parse(""), None);
     }
 
